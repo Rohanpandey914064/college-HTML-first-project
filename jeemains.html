@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Mains Subjects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript for subject selection interactivity
+        document.addEventListener("DOMContentLoaded", () => {
+            const subjectButtons = document.querySelectorAll(".course-button");
+
+            subjectButtons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault(); // Prevent immediate navigation
+                    const subjectName = button.textContent;
+                    const confirmation = confirm(`Are you sure you want to select ${subjectName}?`);
+
+                    if (confirmation) {
+                        // Redirect to the selected subject page
+                        window.location.href = button.getAttribute("href");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>JEE Mains - Select a Subject</h1>
+
+        <img src="https://tse4.mm.bing.net/th/id/OIP.6_LXeEmiS9VRWpf3R36MbQAAAA?rs=1&pid=ImgDetMain" 
+             alt="JEE Mains Subjects" 
+             height="150">
+        <p>Choose the subject you want to study:</p>
+
+        <!-- Subject Buttons -->
+        <div class="button-container">
+            <a href="physics.html" class="course-button">Physics</a>
+            <a href="math.html" class="course-button">Math</a>
+            <a href="chemistry.html" class="course-button">Chemistry</a>
+        </div>
+
+        <!-- Back to Course Selection -->
+        <div style="margin-top: 20px;">
+            <a href="course.html" class="course-button">Back to Course Selection</a>
+        </div>
+    </div>
+</body>
+</html>

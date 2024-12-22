@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Mains Subjects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for interactive effects */
+        .course-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .course-button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NEET - Select a Subject</h1>
+
+        <img src="https://tse2.mm.bing.net/th/id/OIP.ZSuFeRArewPP-P5GlMVBBwHaEc?w=800&h=480&rs=1&pid=ImgDetMain" alt="Welcome Image" height="150">
+        <p id="welcome-message">Choose the subject you want to study:</p>
+
+        <!-- Subject Buttons -->
+        <div class="button-container">
+            <a href="physics2.html" class="course-button">Physics</a>
+            <a href="biology.html" class="course-button">Biology</a>
+            <a href="chemistry2.html" class="course-button">Chemistry</a>
+        </div>
+
+        <!-- Back to Course Selection -->
+        <div style="margin-top: 20px;">
+            <a href="course.html" class="course-button">Back to Course Selection</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for interactive effects
+
+        // Display a dynamic welcoming message
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                welcomeMessage.textContent = 'Good Morning! Select a subject to start learning!';
+            } else if (currentHour < 18) {
+                welcomeMessage.textContent = 'Good Afternoon! Dive into your subject of choice!';
+            } else {
+                welcomeMessage.textContent = 'Good Evening! Continue mastering your subjects!';
+            }
+        });
+
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('.course-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

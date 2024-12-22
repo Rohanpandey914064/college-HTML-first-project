@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript for course selection interactivity
+        document.addEventListener("DOMContentLoaded", () => {
+            const courseButtons = document.querySelectorAll(".course-button");
+
+            courseButtons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault(); // Prevent default navigation
+                    const courseName = button.textContent;
+                    const confirmation = confirm(`Are you sure you want to select ${courseName}?`);
+
+                    if (confirmation) {
+                        // Redirect to the selected course page
+                        window.location.href = button.getAttribute("href");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Course</h1>
+
+        <img src="https://oswalpublishers.com/wp-content/uploads/2023/01/jee-vs-neet.webp" 
+             alt="Welcome Image" 
+             height="150">
+        <p>Please click on the course you are interested in:</p>
+        <div class="button-container">
+            <a href="jeemains.html" class="course-button">JEE Mains</a>
+            <a href="neet.html" class="course-button">NEET</a>           
+        </div>
+    </div>
+</body>
+</html>

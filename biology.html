@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology - NEET</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Biology - NEET</h1>
+
+        <img src="https://wallpaperaccess.com/full/5451375.png" alt="Welcome Image" height="150">
+
+        <p id="welcome-message">Welcome to the biology section! Select resources to start your preparation.</p>
+
+        <!-- Resource Links -->
+        <div class="button-container">
+            <a href="https://youtube.com/playlist?list=PLqQOiO8M4ZTh69olo27MLG1yg5f8hVUOk&si=WUZcxMrDRPbYODCl" class="course-button">One-Shot Videos</a>
+            <a href="https://youtube.com/playlist?list=PLrHjxIp47OtVhGaP6otTZE8ENd8uyYBnf&si=VGH8BCmJ7UmaS8lh" class="course-button">Important Questions</a>
+        </div>
+
+        <!-- Back to Subject Selection -->
+        <div style="margin-top: 20px;">
+            <a href="neet.html" class="course-button">Back to Subjects</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for interactive effects
+
+        // Display a dynamic welcoming message
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                welcomeMessage.textContent = 'Good Morning! Start your biology preparation now!';
+            } else if (currentHour < 18) {
+                welcomeMessage.textContent = 'Good Afternoon! Keep learning and stay focused!';
+            } else {
+                welcomeMessage.textContent = 'Good Evening! Time to revise biology concepts!';
+            }
+        });
+
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('.course-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

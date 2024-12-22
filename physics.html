@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for interactive effects */
+        .course-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #17a2b8;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .course-button:hover {
+            background-color: #138496;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Physics - JEE Mains</h1>
+
+        <img src="https://static.vecteezy.com/system/resources/previews/000/459/767/original/physics-science-flat-design-vector.jpg" alt="Welcome Image" height="150">
+        <p id="welcome-message">Welcome to the Physics section! Select resources to start your preparation.</p>
+
+        <!-- Resource Links -->
+        <div class="button-container">
+            <a href="https://youtube.com/playlist?list=PLxyGaR3hEy3ieFuXAdtlenRNcey9Cxo6I&si=LvaCZIialcOW8MKe" class="course-button">One-Shot Videos</a>
+            <a href="https://youtube.com/playlist?list=PLxyGaR3hEy3hlH58Stj9QlDuGyR3w7Nb9&si=WESVQicACoNHCdZM" class="course-button">Important Questions</a>
+        </div>
+
+        <!-- Back to Subject Selection -->
+        <div style="margin-top: 20px;">
+            <a href="jeemains.html" class="course-button">Back to Subjects</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for interactive effects
+
+        // Display a dynamic welcoming message
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                welcomeMessage.textContent = 'Good Morning! Get started with your Physics preparation!';
+            } else if (currentHour < 18) {
+                welcomeMessage.textContent = 'Good Afternoon! Time to explore the wonders of Physics!';
+            } else {
+                welcomeMessage.textContent = 'Good Evening! Review and master Physics concepts!';
+            }
+        });
+
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('.course-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

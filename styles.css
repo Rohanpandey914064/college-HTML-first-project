@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    background: linear-gradient(to bottom, rgb(231, 184, 169), #d0d8e1);
+    overflow: hidden;
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #e9e3ec 30%, transparent 100%);
+    z-index: -1;
+}
+
+/* Container Styles */
+.container {
+    background-color: hsla(0, 25%, 98%, 0.96);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 20px rgba(247, 245, 245, 0.15);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #130d0e;
+    font-weight: 600;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1a1717;
+    text-align: left;
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #dbda80;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f4eed5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #4d4d50;
+    outline: none;
+    background-color: #f5f1f1;
+    box-shadow: 0 0 6px rgba(89, 94, 99, 0.5);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px 15px;
+    background: #3c3f44;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #6cb7f0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Course Button Styles */
+.course-button {
+    display: inline-block;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 300px;
+    background: #f8906a;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-button:hover {
+    background: #539fd8;
+    transform: translateY(-2px);
+}
+
+.course-button:active {
+    transform: translateY(0);
+}

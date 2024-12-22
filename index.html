@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript for form validation
+        function validateForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value.trim();
+            const college = document.getElementById('college').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            let errorMessage = "";
+
+            if (name === "") {
+                errorMessage += "Name is required.\n";
+            }
+
+            if (college === "") {
+                errorMessage += "College name is required.\n";
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                errorMessage += "Please enter a valid email address.\n";
+            }
+
+            if (password.length < 6) {
+                errorMessage += "Password must be at least 6 characters long.\n";
+            }
+
+            if (errorMessage) {
+                alert(errorMessage); // Show errors
+            } else {
+                alert("Form submitted successfully!"); // Show success message
+                document.querySelector("form").submit(); // Submit the form
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+
+        <img src="https://tse3.mm.bing.net/th/id/OIP.aVo-Ti-SnzddcplNNX71PgHaGP?rs=1&pid=ImgDetMain" 
+             alt="Welcome to Student Registration" 
+             height="150"> 
+
+        <form onsubmit="validateForm(event)" action="course.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" placeholder="Enter your college name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="button-container">
+            <a href="course.html" class="course-button">Explore Courses</a>
+        </div>
+    </div>
+</body>
+</html>

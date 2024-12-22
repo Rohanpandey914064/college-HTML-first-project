@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the active button */
+        .active {
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chemistry - JEE Mains</h1>
+
+        <img src="https://static.vecteezy.com/system/resources/previews/000/224/398/original/chemistry-vector.jpg" alt="Welcome Image" height="150">
+        <p id="welcome-message">Welcome to the Chemistry section! Select resources to start your preparation.</p>
+
+        <!-- Resource Links -->
+        <div class="button-container">
+            <a href="https://youtube.com/playlist?list=PLYFlGICvnvLgtUsAXwDlIa1aRS2agfNT3&si=v7IpHOeyTJGpO5Gz" class="course-button">One-Shot Videos</a>
+            <a href="https://youtube.com/playlist?list=PLxyGaR3hEy3gE20fitmQAcjO5lXzKGviH&si=SwsLYTIfliPb5FoF" class="course-button">Important Questions</a>
+        </div>
+
+        <!-- Back to Subject Selection -->
+        <div style="margin-top: 20px;">
+            <a href="jeemains.html" class="course-button">Back to Subjects</a>
+        </div>
+    </div>
+
+    <script>
+        // Dynamically update the welcome message based on the time of the day
+        const welcomeMessage = document.getElementById('welcome-message');
+        const currentHour = new Date().getHours();
+
+        if (currentHour < 12) {
+            welcomeMessage.textContent = "Good morning! Start your Chemistry preparation with these resources.";
+        } else if (currentHour < 18) {
+            welcomeMessage.textContent = "Good afternoon! Continue your Chemistry learning journey.";
+        } else {
+            welcomeMessage.textContent = "Good evening! Review your Chemistry concepts with these resources.";
+        }
+
+        // Add an active state to the clicked button
+        const buttons = document.querySelectorAll('.course-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('active')); // Remove active class from all
+                this.classList.add('active'); // Add active class to the clicked button
+            });
+        });
+    </script>
+</body>
+</html>

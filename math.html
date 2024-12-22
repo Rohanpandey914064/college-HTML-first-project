@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for interactive effects */
+        .course-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Math - JEE Mains</h1>
+
+        <img src="https://logodix.com/logo/2159962.jpg" alt="Welcome Image" height="150">
+
+        <p id="welcome-message">Welcome to the Math section! Select resources to start your preparation.</p>
+
+        <!-- Resource Links -->
+        <div class="button-container">
+            <a href="https://youtube.com/playlist?list=PLxyGaR3hEy3i256HWk94MwGySg9h1QM2K&si=ce47u36JyApIfmy2" class="course-button">One-Shot Videos</a>
+            <a href="https://youtube.com/playlist?list=PLTa2m6WeLW_99wNxR55gz86pI-YcMKvfr&si=FIPua7KwOQCV_Yza" class="course-button">Important Questions</a>
+        </div>
+
+        <!-- Back to Subject Selection -->
+        <div style="margin-top: 20px;">
+            <a href="jeemains.html" class="course-button">Back to Subjects</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for interactive effects
+
+        // Display a dynamic welcoming message
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                welcomeMessage.textContent = 'Good Morning! Start your Math preparation now!';
+            } else if (currentHour < 18) {
+                welcomeMessage.textContent = 'Good Afternoon! Keep solving and stay sharp!';
+            } else {
+                welcomeMessage.textContent = 'Good Evening! Time to revise Math concepts!';
+            }
+        });
+
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('.course-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
