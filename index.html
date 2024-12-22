@@ -37,8 +37,9 @@
             if (errorMessage) {
                 alert(errorMessage); // Show errors
             } else {
-                alert("Form submitted successfully!"); // Show success message
-                document.querySelector("form").submit(); // Submit the form
+                // Redirect to Thank You page
+                alert("Form submitted successfully!");
+                window.location.href = "thank-you.html";
             }
         }
     </script>
@@ -51,7 +52,7 @@
              alt="Welcome to Student Registration" 
              height="150"> 
 
-        <form onsubmit="validateForm(event)" action="course.html" method="post">
+        <form onsubmit="validateForm(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
