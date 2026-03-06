@@ -1,1 +1,1 @@
-# college-HTML-first-project
+# college-first-project
