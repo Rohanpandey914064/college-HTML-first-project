@@ -11,20 +11,21 @@
 
 <br/><br/>
 
-I'm a **Full Stack Developer** and **AI Enthusiast** who loves building scalable, impactful tech — from civic-tech platforms and AI-powered recruitment tools to molecular gastronomy apps 🍽️🤖. I adapt quickly across domains and enjoy crafting elegant solutions to real-world problems.
+I'm a **Backend & Full Stack Developer** who loves building scalable, decoupled systems — from national-scale registration portals and asynchronous file-processing pipelines to molecular gastronomy apps 🍽️⚙️. I adapt quickly across domains and enjoy crafting elegant solutions to real-world problems.
 
 <img align="right" alt="Coding GIF" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="350px"/>
 
 ###  More About Me:
 
--  &nbsp; Pursuing **B.Tech in Computer Science** at KIET Deemed to be University *(CGPA: 8.59)*
--  &nbsp; Solved **250+ DSA problems** on LeetCode using Java
+-  &nbsp; Pursuing **B.Tech in Computer Science** at KIET Ghaziabad *(CGPA: 8.41)*
+-  &nbsp; Software Development Intern at **Bharat Seva Foundation (BSF India)** — Backend & Full-Stack
+-  &nbsp; Solved **300+ DSA problems** on LeetCode using Java
 -  &nbsp; Completed the **Tata GenAI Powered Data Analytics Job Simulation**
 -  &nbsp; **AWS Certified Cloud Practitioner**
 -  &nbsp; My projects are available on [GitHub](https://github.com/Rohanpandey914064)
--  &nbsp; Ask me about anything in **Full Stack, AI/ML, or Cloud** — happy to help!
+-  &nbsp; Ask me about anything in **Backend, Full Stack, or Cloud** — happy to help!
 -  &nbsp; Reach me at **rohanpandey20051119@gmail.com**
--  &nbsp; Based in **Uttar Pradesh, India**
+-  &nbsp; Based in **Gurugram, India**
 
 <br/>
 
@@ -47,43 +48,46 @@ I'm a **Full Stack Developer** and **AI Enthusiast** who loves building scalable
 
 ---
 
-###  Technical Achievements:
+###  Experience:
 
-|  Achievement |  Duration |
-|---|---|
-|  Solved **250+ DSA problems** on LeetCode (Java) | June 2025 – Present |
-|  **Tata GenAI Powered Data Analytics** Job Simulation | June 2025 – July 2025 |
-|  **AWS Certified Cloud Practitioner** | Nov 2025 – March 2026 |
+####  Software Development Intern — Bharat Seva Foundation (BSF India)
+> **React 18 · Node.js · Express.js · MongoDB Atlas · Razorpay · Cloudinary** &nbsp;|&nbsp; June 2026 – Present
+- Built the backend REST API and MongoDB schemas for a National Olympiad registration & admin portal, with compound indexes keeping query latency under 5ms and benchmarked to scale to 1,00,000+ members.
+- Integrated Razorpay payments with signature verification, automated digital ID card/receipt generation, and Cloudinary CDN for zero-footprint media storage.
+- Secured APIs with JWT auth, Helmet, CORS whitelisting, and rate limiting; proposed a Redis/sharding roadmap to scale to 10,00,000+ members.
 
 ---
 
 ###  My Projects:
 
-####  [ByteBite – The Ultimate Flavor Science Platform](https://github.com/Rohanpandey914064)
-> **Next.js · FastAPI · Python · Tailwind CSS**
+####  [ConvertFlow – Universal File Converter](https://github.com/Rohanpandey914064)
+> **Next.js 14 · Node.js · Express.js · BullMQ · Redis · Tailwind CSS**
+- Scalable SaaS-style file conversion platform with a decoupled architecture and 7 dedicated conversion engines across image, PDF, DOCX, and spreadsheet formats.
+- Asynchronous job processing pipeline with BullMQ and Redis for background file transformations and real-time progress tracking.
 ---
 
-####  [CitySpark – The Digital Twin for Smarter Cities](https://github.com/Rohanpandey914064)
-> **React · Node.js · MongoDB · Vite**
+####  [ByteBite – Molecular Culinary Transformer](https://github.com/Rohanpandey914064)
+> **React 18 · Vite · Framer Motion · HTML5 Canvas**
+- Computational gastronomy platform deconstructing 4,600+ food ingredients into molecular flavor components, with a dependency-free Canvas network graph and physics-based force simulation.
 ---
 
 ###  Certifications:
 
--  **AWS Certified Cloud Practitioner** *(AWS Training & Certification)*
--  **Tata GenAI Powered Data Analytics** Job Simulation
--  **Database Programming with SQL** (2025)
--  **Introduction to NoSQL Databases**
--  **Learning Django Web Development**
--  **Red Hat Training Certification**
+-  **AWS Certified Cloud Practitioner** *(AWS Training & Certification, 2026)*
+-  **Tata GenAI Powered Data Analytics** Job Simulation *(Forage, 2025)*
+-  **Database Programming with SQL** *(Oracle Academy, 2025)*
+-  **Introduction to NoSQL Databases** *(Coursera/IBM, 2025)*
+-  **Learning Django Web Development** *(LinkedIn Learning, 2025)*
+-  **Red Hat Training Certification** *(Red Hat, 2025)*
 
 ---
 
 ###  Technical Skills:
 
 ```
-Languages          : C, Java, JavaScript, SQL, HTML, CSS, Dart
-Frameworks/Libs    : React.js, Node.js, Express.js, Tailwind CSS, Flutter, Vite
-Developer Tools    : VS Code, Docker, Postman, GitHub, Django, Flask
+Languages          : C, Java, JavaScript, Python, SQL, HTML, CSS, Dart
+Frameworks/Libs    : Next.js, React.js, Node.js (Express.js), FastAPI, Flask, Django, Tailwind CSS, Flutter, Vite
+Backend & DevOps   : REST API Development, BullMQ, JWT Authentication, Redis, Docker, AWS (Certified), Firebase, CI/CD, Microservices
 Databases          : MySQL, MongoDB, NoSQL
 Coursework         : Data Structures & Algorithms, OOPS, DBMS, Operating Systems
 ```
