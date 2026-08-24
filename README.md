@@ -188,3 +188,28 @@ jobs:
 <p align="center"> ⭐️ Agar mera kaam pasand aaya, toh mere repos ko star zaroor de dena! </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:D14836,100:0077B5&height=100&section=footer" width="100%"/>
+
+name: Generate Snake
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
