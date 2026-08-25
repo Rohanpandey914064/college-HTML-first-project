@@ -21,7 +21,7 @@
 
 <br/>
 
-## 🧑‍💻 About Me
+##  About Me
 
 ```yaml
 name: Rohan Pandey
